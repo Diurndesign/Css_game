@@ -9,7 +9,7 @@ Kami est un caméléon qui a perdu toutes ses couleurs : il est devenu gris comm
 - **En ligne** : active GitHub Pages (Settings › Pages › *Deploy from a branch*, choisis la branche du jeu et le dossier `/ (root)`). Le jeu sera disponible à l’adresse `https://diurndesign.github.io/Css_game/`.
 - **En local** : ouvre le dossier avec l’extension Live Server de VS Code (ou n’importe quel petit serveur web). Ouvrir `index.html` en double-cliquant peut bloquer l’aperçu dans certains navigateurs.
 
-La progression est enregistrée dans le navigateur, et en ligne si l’élève crée un compte (voir « La sauvegarde en ligne »).
+La progression est enregistrée dans le navigateur de chaque joueur (localStorage).
 
 ## Comment ça marche
 
@@ -22,18 +22,26 @@ La progression est enregistrée dans le navigateur, et en ligne si l’élève c
 | Objectifs | Chaque critère réussi ou raté, avec une explication quand c’est faux |
 | Remarques | Le vérificateur CSS : accolade, deux-points ou point-virgule oubliés, propriété inconnue, valeur invalide (couleur en français, unité manquante…), sélecteur qui ne trouve rien… en français, avec la ligne surlignée dans l’éditeur |
 
+Chaque leçon explique **ce que c’est**, **à quoi ça sert**, le **piège à éviter** et la **bonne pratique** professionnelle. Les missions responsive ont une bascule **Ordinateur / Téléphone**.
+
 Étoiles : 3 sans indice, 2 avec un indice, 1 avec la solution.
 
-## Les 16 missions
+## Pour aller jusqu’au bout
+
+- **Lexique** (menu en haut) : 59 mots du vocabulaire professionnel, définis simplement, avec une recherche ; 12 bonnes pratiques ; et la checklist **« Prêt pour la suite ? »** (15 points), qui renvoie vers la mission à revoir pour chaque point.
+- **Ateliers** : chaque atelier annonce ce qu’on va apprendre et se termine par un bilan « Ce que tu sais faire maintenant ».
+- **Découvrir** : la page commence par ce qu’il faut savoir avant de commencer, et renvoie au jeu précédent si besoin.
+
+## Les 24 missions
 
 | Atelier | Récompense | Notions |
 |---|---|---|
 | 1. Le pinceau | La tête | une règle CSS, classes . et id #, la syntaxe : { } : ;, quiz |
-| 2. Les couleurs | Le corps | color et background-color, #hexadécimal et rgb() |
-| 3. Les lettres | La crête | font-family, font-size, font-weight, text-align, line-height, text-transform |
-| 4. Les boîtes | Les pattes | padding, border, margin, border-radius, width, box-sizing, quiz |
-| 5. Les états | La queue | :hover et cursor, transition |
-| 6. La carte de Kami | Les taches | sélecteurs combinés, box-shadow, mission finale |
+| 2. Les couleurs | Le corps | color et background-color, #hexadécimal et rgb(), cascade, spécificité et héritage |
+| 3. Les lettres | La crête | font-family, font-size, font-weight, text-align, line-height, text-transform, les unités : px, rem, em, %, vw |
+| 4. Les boîtes | Les pattes | padding, border, margin, display : block, inline, inline-block, none, border-radius, width, box-sizing, centrer une boîte : max-width et margin: 0 auto, quiz |
+| 5. Les états et les variables | La queue | :hover et cursor, :focus et l’accessibilité, transition, les variables CSS |
+| 6. La carte de Kami | Les taches | sélecteurs combinés, box-shadow, position : relative et absolute, le responsive : @media, mission finale |
 
 En plus : un **Carnet** (antisèche des notions débloquées) et un **Bac à sable** pour tester librement. Dans le Carnet, l’option « Débloquer toutes les missions » permet au formateur d’ouvrir toutes les missions.
 
@@ -41,12 +49,12 @@ En plus : un **Carnet** (antisèche des notions débloquées) et un **Bac à sab
 
 ```
 index.html   la structure de la page
-style.css    le design commun aux 4 jeux
+jeu.css      le design commun aux 4 jeux
 theme.css    les couleurs de ce jeu (variables CSS dans :root)
-engine.js    le moteur commun : éditeur, aperçu, vérificateur, objectifs, carte, carnet
+engine.js    le moteur commun : éditeur, aperçu, vérificateur, objectifs, carte, carnet, lexique
 cloud.js     la sauvegarde en ligne (Firebase), reprise de Mission Bip
 mascot.js    Kami, le caméléon, en SVG
-game.js      les données du jeu : page Découvrir, ateliers et missions (tableau levels)
+game.js      les données du jeu : page Découvrir, lexique, ateliers et missions (tableau levels)
 ```
 
 Pour ajouter ou modifier une mission, édite le tableau `levels` dans `game.js`. Chaque mission contient : le texte de Kami, la leçon (quoi, pourquoi, code, morceaux, piège), les étapes, la page HTML (`html`), le code de départ, les objectifs (`goals`, avec une fonction `test`), les indices et la solution (qui sert aussi de modèle à reproduire).
