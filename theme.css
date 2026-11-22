@@ -1,0 +1,12 @@
+/* Mission Kami (CSS) : Kami en vert, l’action en rose. */
+:root {
+  --bg: #EAF3EF;
+  --grid: rgba(27, 36, 64, 0.055);
+  --mascot: #3DCB8B;
+  --mascot-deep: #1E9E66;
+  --mascot-soft: #E1F7EC;
+  --mascot-ink: #1B2440;
+  --action: #E8337A;
+  --action-soft: #FDE6EF;
+  --action-ink: #FFFFFF;
+}
