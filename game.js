@@ -64,7 +64,7 @@ const GAME = {
     ],
     trioFocus: "css",
     trioHere: "Tu es ici",
-    trioNote: "Dans ce jeu, les murs sont déjà construits : le HTML de chaque page est écrit pour toi. Tu t’occupes de **la peinture et de la déco** avec le CSS. Avant, Tago t’a appris le HTML ; après, Bip t’apprendra le JavaScript.",
+    trioNote: "Dans ce jeu, les murs sont déjà construits : le HTML de chaque page est écrit pour toi. Tu t’occupes de **la peinture et de la déco** avec le CSS. Avant, tu as construit la maison de Bip en HTML ; après, Bip t’apprendra le JavaScript.",
     demo: {
       title: "La même page, avec et sans CSS",
       text: "Clique sur les trois boutons. Le HTML ne change **jamais** : seul le CSS change.",
@@ -275,7 +275,7 @@ ul {
 <p>Lundi : j’ai grimpé sur la plus haute branche.</p>
 <p class="important">Ne jamais manger les mouches bleues : elles piquent.</p>
 <p>Mardi : sieste au soleil, toute la journée.</p>
-<p class="important">Rendre son chapeau à Tago avant vendredi.</p>`,
+<p class="important">Rendre son tournevis à Bip avant vendredi.</p>`,
     steps: ["Lis le HTML de la page (le volet ci-dessus) : repère la classe et l’id.", "Avec la classe `important`, colore ces deux paragraphes en `crimson`.", "Avec l’id `titre`, colore le titre en `darkcyan`."],
     starter: `/* Une classe commence par un point, un id par un dièse */\n`,
     goals: [
@@ -435,7 +435,7 @@ ul {
     showHTML: true,
     html: `<p class="rubrique">Le journal de la forêt</p>
 <h1>Kami a perdu ses couleurs</h1>
-<p>Ce matin, les habitants de la forêt ont eu une drôle de surprise : Kami, le caméléon le plus coloré du coin, est devenu tout gris. Personne ne sait pourquoi. Ses amis Tago le bernard-l’ermite et Bip le robot mènent l’enquête. Ils ont un indice : un pot de peinture renversé au pied du grand arbre.</p>`,
+<p>Ce matin, les habitants de la forêt ont eu une drôle de surprise : Kami, le caméléon le plus coloré du coin, est devenu tout gris. Personne ne sait pourquoi. Son ami Bip le robot mène l’enquête. Il a un indice : un pot de peinture renversé au pied du grand arbre.</p>`,
     steps: ["Centre le titre `h1`.", "Écris la `.rubrique` en majuscules, avec un espacement des lettres de `3px`.", "Donne aux paragraphes `p` un interligne de `1.6`."],
     starter: `/* La mise en page de l’article */\n`,
     goals: [
@@ -466,8 +466,8 @@ ul {
     base: `.souvenir { background-color: #E1F7EC; }\n.souvenir h2 { margin: 0 0 6px; font-size: 20px; }\n.souvenir p { margin: 0; }`,
     html: `<h1>Mes souvenirs</h1>
 <div class="souvenir">
-  <h2>La plage de Tago</h2>
-  <p>Le jour où j’ai aidé Tago à trouver sa nouvelle coquille.</p>
+  <h2>La maison de Bip</h2>
+  <p>Le jour où j’ai aidé Bip à construire sa nouvelle maison.</p>
 </div>
 <div class="souvenir">
   <h2>La panne de Bip</h2>
@@ -631,7 +631,7 @@ ul {
   },
   {
     id: "ombre", ch: 6, title: "La carte postale", notion: "box-shadow",
-    say: "J’envoie une carte postale à Tago pour lui dire que j’ai presque retrouvé mes couleurs. Mais elle est toute plate, posée sur la page… Elle pourrait flotter un peu ?",
+    say: "J’envoie une carte postale à Bip pour lui dire que j’ai presque retrouvé mes couleurs. Mais elle est toute plate, posée sur la page… Elle pourrait flotter un peu ?",
     lesson: {
       what: ["`box-shadow` ajoute une **ombre** sous une boîte. On lui donne, dans l’ordre : le décalage horizontal, le décalage vertical, le **flou**, puis la couleur.", "Pour la couleur, on utilise souvent `rgba()` : c’est `rgb()` avec une quatrième valeur, l’**opacité**, de 0 (invisible) à 1 (opaque). `rgba(0, 0, 0, 0.2)` est un noir transparent à 20 %."],
       why: "L’ombre donne de la profondeur : la carte semble posée **au-dessus** de la page. Les designers s’en servent pour montrer ce qui est important ou cliquable : cartes de produits, fenêtres, menus déroulants.",
@@ -644,7 +644,7 @@ ul {
     base: `body { background-color: #EAF3EF; padding: 8px; }\n.carte-postale { background-color: white; padding: 24px; border-radius: 16px; max-width: 420px; }\n.carte-postale h2 { margin: 0 0 8px; color: seagreen; }\n.carte-postale p { margin: 0; line-height: 1.6; }\n.signature { margin-top: 12px; font-weight: 700; }`,
     html: `<div class="carte-postale">
   <h2>Bons baisers de la forêt !</h2>
-  <p>Cher Tago, ici il fait chaud et les grillons sont délicieux. J’ai presque retrouvé toutes mes couleurs : il ne me manque plus que mes taches.</p>
+  <p>Cher Bip, ici il fait chaud et les grillons sont délicieux. J’ai presque retrouvé toutes mes couleurs : il ne me manque plus que mes taches.</p>
   <p class="signature">À bientôt, Kami</p>
 </div>`,
     steps: ["Ajoute une ombre à la `.carte-postale` avec `box-shadow`.", "Décalage horizontal `0`, vertical `8px`, flou `20px`.", "Couleur : un noir transparent, `rgba(0, 0, 0, 0.2)`."],
@@ -678,7 +678,7 @@ ul {
   <p class="bio">Je vis dans la forêt, je mange des grillons, et j’ai retrouvé toutes mes couleurs grâce à toi !</p>
   <ul class="infos">
     <li><strong>Couleur préférée :</strong> vert feuille</li>
-    <li><strong>Amis :</strong> Tago, Bip et les lucioles</li>
+    <li><strong>Amis :</strong> Bip et les lucioles</li>
   </ul>
   <button class="bouton">Devenir ami avec Kami</button>
 </div>`,
