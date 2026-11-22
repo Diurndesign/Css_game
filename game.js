@@ -102,7 +102,7 @@ h1 {
 .role {
   color: sienna;
   font-weight: bold;
-}`, caption: "Trois petites règles suffisent : une police plus moderne, un titre vert, le sous-titre en orange et en gras. Le HTML n’a pas changé d’une seule lettre !" },
+}`, caption: "Trois petites règles suffisent : une police plus moderne, un titre vert, le sous-titre en brun orangé et en gras. Le HTML n’a pas changé d’une seule lettre !" },
         { label: "Beaucoup de CSS", css: `body {
   font-family: Arial, sans-serif;
   background-color: #EAF3EF;
@@ -159,7 +159,7 @@ ul {
         ["color: seagreen;", "une **déclaration** : une propriété et sa valeur. Un bloc peut en contenir autant que tu veux, une par ligne"],
         ["color", "la **propriété** : *ce qu’on change* (ici, la couleur du texte). Toujours en anglais"],
         [":", "les deux-points séparent la propriété de sa valeur"],
-        ["seagreen", "la **valeur** : *comment* on le change (ici, vert d’eau)"],
+        ["seagreen", "la **valeur** : *comment* on le change (ici, un vert « vert de mer »)"],
         [";", "le point-virgule termine la déclaration. Ne l’oublie jamais !"]
       ]
     },
@@ -277,10 +277,10 @@ ul {
     ["**Police**", "le dessin des lettres, choisi avec `font-family`. Sa taille se règle avec `font-size`, son épaisseur avec `font-weight`.", "body {\n  font-family: Georgia, serif;\n}"],
     ["**Police de secours**", "la famille générique écrite en dernier dans `font-family` (`serif`, `sans-serif`, `monospace`), utilisée si les autres polices manquent."],
     ["**Interligne**", "l’espace entre les lignes d’un texte, réglé avec `line-height`, de préférence sans unité (`1.6`)."],
-    ["**Unité**", "ce qui suit un nombre pour dire comment le compter : `px`, `rem`, `em`, `%`, `vw`, `s` (secondes)… Seul `0` peut s’en passer."],
+    ["**Unité**", "ce qui suit un nombre pour dire comment le compter : `px`, `rem`, `em`, `%`, `vw`, `s` (secondes)… Pour une taille, seul `0` peut s’en passer."],
     ["**Pixel (`px`)**", "une unité fixe, un point de l’écran. Bien pour les bordures et les ombres."],
     ["**`rem`**", "une unité relative à la taille du texte de la page (16px par défaut). L’unité conseillée pour le texte : elle suit le réglage du visiteur.", "h2 {\n  font-size: 1.5rem; /* 24px */\n}"],
-    ["**`em`**", "une unité relative à la taille du texte du parent : `0.8em` = 80 % du texte du parent."],
+    ["**`em`**", "une unité relative à la taille du texte. Dans `font-size`, c’est celle du parent : `0.8em` = 80 % du texte du parent."],
     ["**Pourcentage (`%`)**", "une part de la taille du parent : `width: 50%` = la moitié de la largeur du parent."],
     ["**`vw`**", "1 % de la largeur de la fenêtre : `100vw` = toute la largeur de l’écran."],
     ["**Modèle de boîte**", "chaque élément est une boîte : le contenu, entouré du `padding`, de la `border`, puis de la `margin`."],
@@ -364,9 +364,9 @@ ul {
       what: ["Le CSS est une liste de **règles**. Une règle dit : « tels éléments de la page doivent ressembler à ça ».", "Elle commence par un **sélecteur** (qui on vise), suivi d’un **bloc de déclarations** entre accolades `{ }`. Chaque **déclaration** s’écrit `propriété: valeur;` : la **propriété** dit *ce qu’on change*, la **valeur** dit *comment*.", "Le sélecteur le plus simple est le **nom d’une balise** : `h1` vise tous les éléments `<h1>` de la page, `p` tous les paragraphes. On l’appelle le **sélecteur de balise**."],
       why: "Avec une seule règle, tu changes **tous** les éléments du même type d’un coup. Si ta page a 20 paragraphes, une règle `p` les colore tous : pas besoin de le faire 20 fois.",
       code: `h1 {\n  color: seagreen;\n}\n\np {\n  color: teal;\n}`,
-      pieces: [["h1", "le **sélecteur** de balise : tous les titres `<h1>` de la page"], ["{ }", "les accolades entourent le **bloc de déclarations** de la règle"], ["color: seagreen;", "une **déclaration** : une propriété, deux-points, une valeur, point-virgule"], ["color", "la **propriété** : la couleur du **texte**. Toujours en anglais"], ["seagreen", "la **valeur** : un nom de couleur, en anglais (*vert d’eau*)"], [";", "le point-virgule termine chaque déclaration"]],
+      pieces: [["h1", "le **sélecteur** de balise : tous les titres `<h1>` de la page"], ["{ }", "les accolades entourent le **bloc de déclarations** de la règle"], ["color: seagreen;", "une **déclaration** : une propriété, deux-points, une valeur, point-virgule"], ["color", "la **propriété** : la couleur du **texte**. Toujours en anglais"], ["seagreen", "la **valeur** : un nom de couleur, en anglais (*vert de mer*)"], [";", "le point-virgule termine chaque déclaration"]],
       example: { code: `h1 {\n  color: tomato;\n}`, html: `<h1>Un titre tomate</h1>\n<p>Le paragraphe, lui, ne change pas.</p>` },
-      trap: "Écrire les couleurs en français : `color: vert;` ne fonctionne pas. Le CSS ne parle qu’anglais : `green`, `red`, `blue`… Il existe 140 noms de couleurs, comme `seagreen`, `tomato` ou `gold`.",
+      trap: "Écrire les couleurs en français : `color: vert;` ne fonctionne pas. Le CSS ne parle qu’anglais : `green`, `red`, `blue`… Il existe près de 150 noms de couleurs, comme `seagreen`, `tomato` ou `gold`.",
       good: "Écris **une déclaration par ligne**, décalée de 2 espaces (on dit *indentée*), ferme l’accolade seule sur sa ligne et laisse une ligne vide entre deux règles. Ton CSS se lit d’un coup d’œil, par toi comme par tes collègues."
     },
     html: `<h1>Kami le caméléon</h1>
@@ -431,7 +431,7 @@ ul {
   <li>Une mouche à la vanille</li>
   <li>Un ver de farine (pour le dessert)</li>
 </ul>`,
-    steps: ["Ouvre l’onglet **Remarques** sous l’éditeur : il signale les fautes et leur ligne.", "Corrige les trois fautes : il manque un `;`, un `:` et une accolade `}`.", "Quand tout est réparé, le titre est orange sur fond jaune et l’intro est verte. La liste est déjà violette : le navigateur a deviné l’accolade qui manque… mais le vérificateur, lui, la voit !"],
+    steps: ["Ouvre l’onglet **Remarques** sous l’éditeur : il signale les fautes et leur ligne.", "Corrige les trois fautes : il manque un `;`, un `:` et une accolade `}`.", "Quand tout est réparé, le titre est brun orangé sur fond jaune pâle et l’intro est verte. La liste est déjà violette : le navigateur a deviné l’accolade qui manque… mais le vérificateur, lui, la voit !"],
     starter: `h1 {\n  color: sienna\n  background-color: lightyellow;\n}\n\n.intro {\n  color seagreen;\n  font-style: italic;\n}\n\nli {\n  color: slateblue;\n`,
     goals: [
       { label: "Le titre est `sienna` sur fond `lightyellow`", test: c => sameColor(cs(c, "h1", "color"), "sienna") && sameColor(cs(c, "h1", "background-color"), "lightyellow") },
@@ -492,7 +492,7 @@ ul {
   },
   {
     id: "hexa", ch: 2, title: "Le nuancier de Kami", notion: "#hexadécimal et rgb()",
-    say: "Les noms de couleurs, c’est bien, mais il n’y en a que 140. Moi, je veux **mon** vert exact ! Il paraît qu’il existe des codes secrets…",
+    say: "Les noms de couleurs, c’est bien, mais il n’y en a même pas 150. Moi, je veux **mon** vert exact ! Il paraît qu’il existe des codes secrets…",
     lesson: {
       what: ["Pour choisir parmi 16 millions de couleurs, on utilise des **codes**. Le plus courant est l’**hexadécimal** : un dièse suivi de 6 caractères, comme `#3DCB8B`. Les deux premiers donnent la quantité de rouge, les deux suivants le vert, les deux derniers le bleu.", "On peut aussi écrire `rgb(31, 181, 168)` : la quantité de **r**ouge, de **g**reen (vert) et de **b**lue (bleu), chacune de 0 à 255."],
       why: "Les designers donnent leurs couleurs en codes, jamais en noms. Avec un code, la couleur est exactement la même partout : sur le site, l’appli et les affiches de la marque.",
@@ -574,7 +574,7 @@ ul {
     steps: ["Donne à toute la page (`body`) la police `Georgia, serif`.", "Donne au titre `h1` une taille de `40px`.", "Mets le paragraphe `.auteur` en gras (`bold`)."],
     starter: `/* Les lettres du poème */\n`,
     goals: [
-      { label: "Toute la page est en `Georgia`, avec `serif` en secours", test: c => (/georgia/i.test(cs(c, "p", "font-family")) && /\bserif/i.test(cs(c, "body", "font-family"))) || (/georgia/i.test(cs(c, "body", "font-family")) ? "Ajoute une police de secours après une virgule : Georgia, serif." : (/georgia/i.test(cs(c, "h1", "font-family")) ? "Seul le titre a changé : mets la police sur body pour toute la page." : false)) },
+      { label: "Toute la page est en `Georgia`, avec `serif` en secours", test: c => (/georgia/i.test(cs(c, "p", "font-family")) && /(^|,)\s*serif\s*(,|$)/i.test(cs(c, "body", "font-family"))) || (/georgia/i.test(cs(c, "body", "font-family")) ? "Ajoute une police de secours après une virgule : Georgia, serif." : (/georgia/i.test(cs(c, "h1", "font-family")) ? "Seul le titre a changé : mets la police sur body pour toute la page." : false)) },
       { label: "Le titre fait `40px`", test: c => px(cs(c, "h1", "font-size")) === 40 || (decl(c, "h1", "font-size") === "40" ? "Il manque l’unité : 40px." : false) },
       { label: "`.auteur` est en gras", test: c => px(cs(c, ".auteur", "font-weight")) >= 600 },
       { label: "Aucune erreur", test: noErrors }
@@ -616,10 +616,10 @@ ul {
     id: "unites", ch: 3, title: "L’affiche du concours", notion: "les unités : px, rem, em, %, vw",
     say: "J’organise un grand concours de camouflage ! Mon affiche doit rester lisible sur tous les écrans, même chez ceux qui ont réglé leur navigateur en grands caractères.",
     lesson: {
-      what: ["Une **unité** dit dans quelle mesure on compte une taille. Le `px` (**pixel**) est une taille **fixe**. Les autres unités sont **relatives** : elles dépendent d’autre chose.", "`rem` dépend de la taille du texte de la page (16px par défaut) : `2rem` = 2 × 16 = 32px. `em` dépend de la taille du texte du **parent**. `%` dépend aussi du parent : `width: 50%` = la moitié de la largeur du parent. Et `vw` dépend de la fenêtre : `100vw` = toute la largeur de l’écran."],
+      what: ["Une **unité** dit dans quelle mesure on compte une taille. Le `px` (**pixel**) est une taille **fixe**. Les autres unités sont **relatives** : elles dépendent d’autre chose.", "`rem` dépend de la taille du texte de la page (16px par défaut) : `2rem` = 2 × 16 = 32px. `em`, dans `font-size`, dépend de la taille du texte du **parent**. `%` dépend aussi du parent : `width: 50%` = la moitié de la largeur du parent. Et `vw` dépend de la fenêtre : `100vw` = toute la largeur de l’écran."],
       why: "Beaucoup de personnes agrandissent le texte de leur navigateur pour mieux lire. Avec `rem`, tes textes grandissent avec ce réglage ; en `px`, ils restent bloqués. Et avec `%`, une boîte s’adapte à la place disponible : c’est le début du **responsive**, une page qui s’adapte à la taille de l’écran.",
       code: `h1 {\n  font-size: 2.5rem; /* 40px */\n}\n\n.affiche {\n  width: 80%; /* du parent */\n}\n\n.petit {\n  font-size: 0.8em; /* du parent */\n}`,
-      pieces: [["px", "le pixel : une taille fixe. Parfait pour les petits détails (`border: 2px`)"], ["rem", "relatif à la taille du texte de la page : `1rem` = 16px par défaut. L’unité conseillée pour le texte"], ["em", "relatif à la taille du texte du parent : `0.8em` = 80 % de la taille du parent"], ["%", "un pourcentage du parent. Avec `width`, de la largeur du parent"], ["vw", "1 % de la largeur de la fenêtre : `50vw` = la moitié de l’écran"], ["width", "la **largeur** d’une boîte. Tu la retrouveras dans l’atelier des boîtes"]],
+      pieces: [["px", "le pixel : une taille fixe. Parfait pour les petits détails (`border: 2px`)"], ["rem", "relatif à la taille du texte de la page : `1rem` = 16px par défaut. L’unité conseillée pour le texte"], ["em", "dans `font-size`, relatif à la taille du texte du parent : `0.8em` = 80 % de la taille du parent"], ["%", "un pourcentage du parent. Avec `width`, de la largeur du parent"], ["vw", "1 % de la largeur de la fenêtre : `50vw` = la moitié de l’écran"], ["width", "la **largeur** d’une boîte. Tu la retrouveras dans l’atelier des boîtes"]],
       example: { code: `.a { font-size: 1rem; }\n.b { font-size: 1.5rem; }\n.c {\n  width: 50%;\n  background-color: gold;\n}`, html: `<p class="a">1rem = 16px</p>\n<p class="b">1.5rem = 24px</p>\n<p class="c">width: 50%</p>` },
       trap: "Oublier l’unité ou mettre un espace : `font-size: 2.5;` et `2.5 rem` ne marchent pas. Seul le zéro peut s’écrire sans unité (`margin: 0`). Et `line-height: 1.6`, lui, est **voulu** sans unité : c’est un multiple de la taille du texte.",
       good: "Utilise `rem` pour les tailles de texte, `px` pour les petits détails fixes (bordures, ombres), et `%` ou `max-width` pour les largeurs. Ta page restera lisible quel que soit l’écran ou le réglage du visiteur."
@@ -682,7 +682,7 @@ ul {
   },
   {
     id: "display", ch: 4, title: "Le menu de Kami", notion: "display : block, inline, inline-block, none",
-    say: "Sur ma page, les liens du menu se chevauchent, l’annonce ne prend pas toute la largeur et… ma cachette secrète est visible par tout le monde !",
+    say: "Sur ma page, les liens du menu débordent sur les lignes voisines, l’annonce ne prend pas toute la largeur et… ma cachette secrète est visible par tout le monde !",
     lesson: {
       what: ["Chaque élément a un **type d’affichage**, réglé par la propriété `display`. Les éléments **de bloc** (`block` : `h1`, `p`, `div`, `ul`…) commencent sur une nouvelle ligne et prennent toute la largeur. Les éléments **en ligne** (`inline` : `a`, `span`, `strong`…) restent dans le texte, à la suite, et ignorent `width`, `height` et les marges du haut et du bas.", "Avec `display`, on change ce comportement : `inline-block` garde l’élément dans la ligne **mais** accepte toutes les tailles et les marges, `block` le transforme en bloc, et `none` le **cache** complètement."],
       why: "C’est `display` qui explique pourquoi un `padding` « déborde » sur un lien, ou pourquoi un `span` refuse sa largeur. Les boutons d’un menu sont souvent des liens en `inline-block`. Et c’est aussi avec `display` que tu activeras **Flexbox** (`display: flex`) et **Grid** (`display: grid`) dans les prochains jeux.",
@@ -763,7 +763,7 @@ ul {
     base: `body { background-color: #EAF3EF; }\n.lettre { background-color: white; padding: 24px; border-radius: 16px; }\n.lettre h1 { margin-top: 0; font-size: 1.5rem; color: seagreen; }\n.lettre p { line-height: 1.6; }\n.signature { font-weight: 700; margin-bottom: 0; }`,
     html: `<div class="lettre">
   <h1>Chers amis de la forêt,</h1>
-  <p>Grâce à vous, j’ai retrouvé presque toutes mes couleurs : ma tête est verte, mon corps est orange et ma crête est turquoise. Merci à Bip, qui a mené l’enquête, et aux lucioles, qui ont éclairé mes nuits.</p>
+  <p>Grâce à vous, j’ai retrouvé presque toutes mes couleurs : ma tête et mon corps sont verts, et ma crête est orange. Merci à Bip, qui a mené l’enquête, et aux lucioles, qui ont éclairé mes nuits.</p>
   <p>Je vous invite tous à fêter ça samedi, au pied du grand arbre. Apportez des grillons !</p>
   <p class="signature">Kami</p>
 </div>`,
@@ -1012,7 +1012,7 @@ ul {
     base: `body { background-color: #EAF3EF; }\n.fiche { max-width: 360px; background-color: white; padding: 24px; border-radius: 16px; }\n.fiche h2 { margin: 0 0 8px; color: seagreen; }\n.fiche p { margin: 0; line-height: 1.6; }\n.badge { background-color: #C2185B; color: white; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; }`,
     html: `<div class="fiche">
   <span class="badge">Nouveau</span>
-  <h2>Le camouflage pour les nuls</h2>
+  <h2>Le camouflage expliqué aux débutants</h2>
   <p>Le livre de Kami : 100 astuces pour disparaître dans le décor. Préface de Bip le robot.</p>
 </div>`,
     steps: ["Donne à la `.fiche` (le parent) `position: relative` : elle devient le repère.", "Donne au `.badge` (l’enfant) `position: absolute`.", "Place-le à `12px` du haut (`top`) et à `12px` de la droite (`right`) de la fiche."],
@@ -1054,11 +1054,11 @@ ul {
     goals: [
       { label: "Une media query `@media (max-width: 600px)` existe", test: c => (c.rules || []).some(r => r.media && /max-width\s*:\s*600px/i.test(r.media)) || ((c.rules || []).some(r => r.media) ? "Ta media query doit avoir la condition (max-width: 600px)." : (/@media/.test(c.clean) ? "Ta media query est vide : écris des règles complètes entre ses accolades." : false)) },
       { label: "Sur téléphone, le `h1` passe à `2rem`", test: c => norm(kMQ(c, ["h1", ".entete h1"], "font-size")) === "2rem" },
-      { label: "Sur téléphone, la `.contenu` a un `padding` de `16px`", test: c => norm(kMQ(c, [".contenu"], "padding")) === "16px" },
+      { label: "Sur téléphone, la `.contenu` a un `padding` de `16px`", test: c => ["16px", "16px 16px", "16px 16px 16px", "16px 16px 16px 16px", "1rem"].includes(norm(kMQ(c, [".contenu"], "padding"))) },
       { label: "Sur téléphone, la `.pub` est cachée", test: c => norm(kMQ(c, [".pub", ".contenu .pub"], "display")) === "none" },
       { label: "Sur ordinateur, rien ne change", test: c => (px(cs(c, "h1", "font-size")) === 48 && px(cs(c, ".contenu", "padding-left")) === 48 && cs(c, ".pub", "display") !== "none") || "Sur ordinateur aussi, la page a changé : les nouvelles règles doivent être À L’INTÉRIEUR des accolades de la media query." },
-      { label: "La media query est écrite après les règles normales", test: c => { const a = kIndex(c, ["h1", ".entete h1"], true), b = kIndex(c, ["h1"], false); return a < 0 || b < 0 || a > b || "Ta media query est écrite avant la règle h1 normale : sur téléphone, c’est la règle normale qui gagne. Déplace la media query à la fin."; } },
-      { label: "Chaque accolade est fermée, celles des règles et celle de la media query", test: c => (c.clean.match(/{/g) || []).length === (c.clean.match(/}/g) || []).length || "Compte tes accolades : il faut autant de { que de }. La media query se ferme tout à la fin, après la dernière règle." },
+      { label: "La media query est écrite après les règles normales", test: c => { const a = kIndex(c, ["h1", ".entete h1"], true), b = kIndex(c, ["h1"], false); return a < 0 ? false : (b < 0 || a > b || "Ta media query est écrite avant la règle h1 normale : sur téléphone, c’est la règle normale qui gagne. Déplace la media query à la fin."); } },
+      { label: "Chaque accolade est fermée, celles des règles et celle de la media query", test: c => !(c.rules || []).some(r => r.media) ? false : ((c.clean.match(/{/g) || []).length === (c.clean.match(/}/g) || []).length || "Compte tes accolades : il faut autant de { que de }. La media query se ferme tout à la fin, après la dernière règle.") },
       { label: "Aucune erreur", test: noErrors }
     ],
     hints: ["Sous le dernier commentaire : `@media (max-width: 600px) {` puis, plus bas, l’accolade fermante `}`.", "Entre ces accolades, des règles complètes, décalées de 2 espaces : `h1 { font-size: 2rem; }` et `.contenu { padding: 16px; }`.", "Et la troisième : `.pub { display: none; }`. Attention à bien fermer chaque règle, puis la media query."],
@@ -1110,7 +1110,7 @@ ul {
     ],
     hints: ["Les variables : `:root { --principale: darkgreen; --accent: sienna; }`. La carte : `.profil { max-width: 340px; box-sizing: border-box; margin: 0 auto; padding: 24px; background-color: white; }`, puis ajoute `border-radius`, `box-shadow` et `text-align: center`.", "L’avatar : `.avatar { width: 90px; height: 90px; margin: 0 auto; border-radius: 50%; background-color: var(--principale); }`. Pour centrer le K verticalement : `line-height: 90px;`.", "Le bouton : `.bouton { background-color: var(--principale); color: white; cursor: pointer; transition: background-color 0.3s; }`, puis `.bouton:hover { background-color: var(--accent); }` et `.bouton:focus { outline: 3px solid var(--accent); }`."],
     solution: `/* La carte de profil de Kami */\n\n/* 1. Les couleurs (variables) et le fond de la page */\n:root {\n  --principale: darkgreen;\n  --accent: sienna;\n  --fond: #EAF3EF;\n}\n\nbody {\n  background-color: var(--fond);\n}\n\n/* 2. La carte .profil */\n.profil {\n  max-width: 340px;\n  box-sizing: border-box;\n  margin: 0 auto;\n  padding: 24px;\n  background-color: white;\n  border-radius: 20px;\n  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);\n  text-align: center;\n}\n\n/* 3. L’avatar rond */\n.avatar {\n  width: 90px;\n  height: 90px;\n  margin: 0 auto;\n  border-radius: 50%;\n  background-color: var(--principale);\n  color: white;\n  font-size: 2.5rem;\n  font-weight: bold;\n  line-height: 90px;\n}\n\n/* 4. Les textes : h1, .role, .bio */\nh1 {\n  margin: 12px 0 0;\n  font-family: Georgia, serif;\n  color: var(--principale);\n}\n\n.role {\n  margin-top: 4px;\n  color: var(--accent);\n  font-size: 0.8rem;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.bio {\n  line-height: 1.6;\n}\n\n.infos {\n  padding: 12px 12px 12px 32px;\n  border-radius: 12px;\n  background-color: #E1F7EC;\n}\n\n/* 5. Le bouton : survol et focus */\n.bouton {\n  padding: 12px 20px;\n  border-radius: 999px;\n  background-color: var(--principale);\n  color: white;\n  font-weight: bold;\n  cursor: pointer;\n  transition: background-color 0.3s;\n}\n\n.bouton:hover {\n  background-color: var(--accent);\n}\n\n.bouton:focus {\n  outline: 3px solid var(--accent);\n  outline-offset: 3px;\n}\n`,
-    debrief: "Bravo : tu as habillé une page entière, des variables de couleur jusqu’au contour de focus du bouton. Le HTML dit **ce qu’il y a**, le CSS dit **à quoi ça ressemble** : tu maîtrises maintenant les deux, avec le bon vocabulaire et les bons réflexes. Avant de partir, passe par le **Lexique** et sa liste « Prêt pour la suite ? ». Il reste une grande question : comment **placer** les éléments côte à côte ? C’est le rôle de Flexbox, et Kami t’attend à l’étang avec les lucioles !"
+    debrief: "Bravo : tu as habillé une page entière, des variables de couleur jusqu’au contour de focus du bouton. Le HTML dit **ce qu’il y a**, le CSS dit **à quoi ça ressemble** : tu maîtrises maintenant les deux, avec le bon vocabulaire et les bons réflexes. Avant de partir, passe par le **Lexique** et sa liste « Prêt pour Kami et les lucioles (Flexbox) ? ». Il reste une grande question : comment **placer** les éléments côte à côte ? C’est le rôle de Flexbox, et Kami t’attend à l’étang avec les lucioles !"
   }
   ]
 };
